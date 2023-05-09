@@ -26,6 +26,14 @@ const HomePage = () => {
         <Box
           flexBasis={isNonMobileScreens ? "42%" : undefined}
           mt={isNonMobileScreens ? undefined : "2rem"}
+          sx={{
+            height: 700,
+            overflow: "hidden",
+            overflowY: "scroll",
+            "&::-webkit-scrollbar": {
+              width: 0,
+            },
+          }}
         >
           <MyPostWidget picturePath={picturePath} />
           <PostsWidget userId={_id} />
